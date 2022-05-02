@@ -1,8 +1,7 @@
 export default function Submit() {
- 
     return (
         <>
-            Submit route
+            <h1>Submit</h1>
         </>
     )
 }

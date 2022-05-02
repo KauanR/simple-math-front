@@ -1,8 +1,7 @@
 export default function Response() {
- 
     return (
         <>
-            Response route
+            <h1>Response</h1>
         </>
     )
 }
