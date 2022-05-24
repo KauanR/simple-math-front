@@ -1,32 +1,29 @@
-import { Button } from '@mui/material'
-import Link from 'next/link'
+import { Button, useTheme } from '@mui/material'
+import styles from './styles.module.scss'
 
 export default function Home() {
-    return (
-        <>
-            <main>
-                <h1>
-                    Home
-                </h1>
-                <p>
-                    Aplicação muito descolada e incrível
-                </p>
-                <Button variant="contained">
-                    <Link href="/submit">
-                        <a>
-                            Salve, bó pra pagina submit
-                        </a>
-                    </Link>
-                </Button>
+    const theme = useTheme()
 
-                <Button variant="contained" color="secondary">
-                    <Link href="/response">
-                        <a>
-                            Salve, bó pra pagina response
-                        </a>
-                    </Link>
+    return (
+        <div className={styles.wrap}>
+            <img className={styles.img} src="/logo.svg" />
+
+            <h5 style={theme.typography.h5}>
+                Bem vindo ao <span className={styles.title}>Simple Math</span>!
+            </h5>
+
+            <p style={theme.typography.body2}>
+                Uma maneira rápida de resolver problemas matemáticos
+            </p>
+
+            <div>
+                <Button 
+                    variant="contained" 
+                    color="primary" 
+                >
+                    Começar
                 </Button>
-            </main>
-        </>
+            </div>
+        </div>
     )
 }
