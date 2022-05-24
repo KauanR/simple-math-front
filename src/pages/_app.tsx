@@ -8,6 +8,7 @@ export default function App({Component, pageProps}) {
         <>
             <Head>
                 <title>Simple Math</title>
+                <link rel="icon" type="image/png" href="/favicon.ico" />
             </Head>
             <main>
                 <ThemeProvider theme={customTheme}>
